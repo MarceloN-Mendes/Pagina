@@ -110,7 +110,7 @@ h4{
 /*===================Headear===================*/
 
 header {
-    z-index: 3; 
+    z-index: 1; 
     width: 100%;
     background-color: var(--HeaderAndFooter);
   }
