@@ -24,17 +24,16 @@
         
         <div class="header">
             <a href="#"><img src="img/Logo.png" alt="Logo da empresa" class="logo"></a>
-            <h2><a href="HTML/vendas.html" id="navInt">Cupons</a></h2>
-            <h2><a href="/HTML/produtos.html" id="navInt">Produtos</a></h2>
+            <h2><a href="HTML/vendas.html" id="navInt">Produtos</a></h2>
             <div class="icons">
-                <span class="material-symbols-outlined iconsHeader" >
+                <span class="material-symbols-outlined iconsHeader" onclick="pesquisa()">
                     search
                 </span>
                 <span class="material-symbols-outlined iconsHeader menuH" onclick="menu()">
                     menu
                 </span>
             </div>
-              
+            
             
         </div>
         <div class="transition"></div>
@@ -43,7 +42,7 @@
                 <li><a href="#navAbout">Technova</a></li>
                 <li><a href="#navAbout2">História</a></li>
                 <li><a href="#navAbout3">Diferencial</a></li>
-                <li><a href="#QRcode">QRcode</a></li>
+                <li><a href="#navAbout4">Reflexão</a></li>
             </ul>
         </nav>
         
@@ -84,7 +83,7 @@
             <li class="liMenu"><a href="#navAbout"  onclick="link()">Technova</a></li>
             <li class="liMenu"><a href="#navAbout2" onclick="link()">História</a></li>
             <li class="liMenu"><a href="#navAbout3" onclick="link()">Diferencial</a></li>
-            <li class="liMenu"><a href="#navAbout4" onclick="link()">QRcode</a></li>
+            <li class="liMenu"><a href="#navAbout4" onclick="link()">Reflexão</a></li>
         </ul>
         <span class="material-symbols-outlined" id="close" onclick="fecharMenu()" >
             close
@@ -92,15 +91,12 @@
     </section>
 
     <main>
+         
         <div class="transition" id="navAbout"></div>
-        
-        <div class="inicio">
-            <img src="img/download.jpg" alt="pc" class="imginicio">
-            <h2 class="slogam" id="museomoderno-font1">TechNova</h2>
-        </div>
-
+        <h2 class="museomoderno-font">TechNova</h2>
         <section id="about">
            
+           <img src="img/code.png" alt="um computador com uma codação na tela" id="fund">
             <div class="textAbout">    
                 <p>
                     Ao longo dos anos, nos tornamos conhecidos por nossos computadores e laptops de alto desempenho, projetados tanto para consumidores quanto para empresas. Combinando design elegante e tecnologia de ponta, nossos dispositivos são ideais para trabalho, estudo e entretenimento. Além disso, nossos smartphones são famosos por suas funcionalidades avançadas, câmeras de alta resolução e interfaces intuitivas, proporcionando uma experiência de usuário superior.
@@ -116,7 +112,7 @@
         
         <div class="transition" id="navAbout2"></div>    
         
-        <h2 class="museomoderno-font">Aqui inicia nossa história <strong class="neonderthaw-regular">!</strong></h2>
+        <h2 class="museomoderno-font">Aqui inicia nossa historia <strong class="neonderthaw-regular">!</strong></h2>
 
         <section id="info">
             <div id="contInfo">    
@@ -146,29 +142,44 @@
 
         <div class="transition" id="navAbout3"></div>
         
+        <h2 class="museomoderno-font">Diferencial</h2>
+        
         <section id="diferencial">
 
-                    <div class="dife" ="h4Um">
-                        <img src="/img/sus-removebg-preview.png" alt="imagem" class="imagensdife">
+            <div class="left">
+                    <div id="h4Um">
                         <h4 >Sustentabilidade</h4> 
+                        <p id="p1">    
+                            A TechNova é uma empresa profundamente comprometida com a sustentabilidade e a responsabilidade ambiental. Adotamos práticas ecológicas em todas as etapas de nossa cadeia de valor, desde o desenvolvimento de produtos até a distribuição. Utilizamos materiais reciclados sempre que possível e implementamos processos de fabricação que minimizam o impacto ambiental. Além disso, participamos ativamente de programas de reciclagem e iniciativas comunitárias que promovem a sustentabilidade. Este compromisso é reconhecido por diversos prêmios de sustentabilidade que recebemos ao longo dos anos.
+                        </p>
                     </div>
-                    <div class="dife"  id="h4dois">
-                        <img src="/img/ino-removebg-preview.png" alt="imagem" class="imagensdife">
+                    <div id="h4dois">
                         <h4 >Inovação Contínua</h4> 
+                        <p id="p2">    
+                            A TechNova se destaca por seu compromisso inabalável com a inovação. Investimos significativamente em pesquisa e desenvolvimento, criando tecnologias disruptivas que definem tendências no setor. Nosso laboratório de inovação é um centro de excelência, onde engenheiros e cientistas trabalham incessantemente em novas ideias que moldam o futuro da tecnologia. Este foco constante em inovação nos permite lançar produtos pioneiros que atendem às necessidades emergentes do mercado e superam as expectativas dos clientes.
+                        </p>
                     </div>
-                    <div class="dife" id="h4tres">
-                        <img src="/img/par-removebg-preview.png" alt="imagem" class="imagensdife">
-                        <h4 >Parcelamento</h4>
-                    </div>                
-                <div class="dife"  id="h4quatro">
-                    <img src="/img/sup-removebg-preview.png" alt="imagem" class="imagensdife">
+                    <div id="h4tres">
+                        <h4 >Qualidade Superior</h4> 
+                        <p id="p3">    
+                            A qualidade é a marca registrada da TechNova. Cada produto é projetado com atenção meticulosa aos detalhes, utilizando materiais de alta qualidade e processos de fabricação avançados. Nossos computadores, laptops, smartphones e dispositivos inteligentes são reconhecidos pelo desempenho robusto, durabilidade e design elegante. Este compromisso com a qualidade garante que nossos clientes recebam produtos confiáveis que proporcionam uma experiência de usuário excepcional.
+                        </p>
+                    </div>
+            </div>
+            <div class="right">                   
+                <div id="h4quatro">
                         <h4 >Suporte ao Cliente</h4> 
+                        <p id="p4">
+                            O suporte ao cliente da TechNova é um dos nossos principais diferenciais. Nos orgulhamos de oferecer um atendimento excepcional, com uma equipe dedicada e bem treinada pronta para ajudar nossos clientes com qualquer dúvida ou problema. Nosso índice de satisfação do cliente é elevado, refletindo a qualidade do nosso serviço. Recebemos vários prêmios de Atendimento ao Cliente, o que demonstra nosso compromisso em proporcionar uma experiência positiva e sem complicações para nossos clientes.
+                        </p>
                 </div>
-                <div class="dife" id="h4cinco"> 
-                    <img src="/img/seg-removebg-preview.png" alt="imagem" class="imagensdife">   
+                <div id="h4cinco">    
                         <h4 >Segurança e Conveniência </h4>
+                        <p id="p5">    
+                            Em um mundo cada vez mais conectado, a segurança e a conveniência são cruciais. A TechNova oferece uma linha crescente de dispositivos inteligentes para o lar, incluindo assistentes virtuais, sistemas de segurança e soluções de automação residencial. Estes produtos são projetados para proporcionar segurança e conveniência aos nossos clientes, permitindo o controle fácil e seguro de suas casas através de dispositivos móveis. Nossas soluções inteligentes garantem que nossos clientes possam viver com tranquilidade e conforto.
+                        </p>
                 </div>
-
+            </div>
             <div id="mobile">
                 
                 <h4 class="titleMob" onclick="sust()">Sustentabilidade</h4>
@@ -225,28 +236,10 @@
     </main>
 
     <footer>
-        <section id="final">
-            <div>
-            <h4>Quero me inspirar com todas as novidades da TechNova</h4>
-            <div id="email">
-            <input type="text" id="campoPesquisa" placeholder="*email">
-            <button onclick="validarEmail()">
-                <p>Validar</p><!-- Ícone de lupa -->
-              </button>
-            </div>
-        </div>
-        <section id="QRcode">
+        <section>
             <img src="img/TechNova.png" id="QRcode" alt="">
         </section>
-
-        <div id="redes">
-            <img src="/img/inta.jpg" alt=""> <p>@technova_</p>
-            <img src="img/face.jpg" alt="">  <p>@Technova</p>
-            <img src="img/twitter.jpg" alt="">  <p>@_technova_</p>
-        </div>
-            <p id="resultado"></p>
-        </section>
-        <h5>Criado por: Mariana Gonçalves, Giovanna Perazolli, Anna Alves, Marcelo Mendes e Samilla Herba | Todos os direitos reservados. &copy; TechNova &amp; Corporation</h5>
+        <h5>&copy; TechNova &amp; Corporation</h5>
     </footer>
 
     <script src="JS/script.js"></script>
