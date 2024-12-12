@@ -163,15 +163,10 @@ input{
   width: 100%;
   height: 100%;
   padding: 5px;
-  background-color: var(--pesquisaBackgroud);
   font-size: 24px;
-  color: #FFFF;
 }
 
-input::placeholder{
-  font-size: 24px;
-  color: #FFFF;
-}
+
 
 #pesquisa{
   width: 100%;
@@ -265,6 +260,7 @@ header {
   position: fixed;
   width: 100%;
   background-color: var(--HeaderAndFooter);
+  z-index: 3;
   
 }
 .header{   
@@ -335,8 +331,7 @@ nav > ul > li > a{
 }
 
 .textAbout{
-  height: 502px;
-  width: 422px;
+ 
   background-image:linear-gradient(to right , #fff,rgba(90, 131, 252, 0.67)) ;
   
 }
@@ -385,15 +380,22 @@ nav > ul > li > a{
 
 #diferencial{
   display: flex;
-  width:98%;
+  width:100%;
   height: max-content;
-  border-radius: 21px;
   background-color: rgba(90, 131, 252, 0.5);
-  padding: 15px;
-  margin-left: 4px;
-  margin-right: 12px;
-  margin-bottom: 15px;
+  padding: 20px 35px 20px 30px;
+  margin-bottom: 50px;
+  margin-top: 30px;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.imagensdife{
+  width: 30%;
+}
+
+.dife{
+  text-align: center;
 }
 
 
@@ -416,7 +418,6 @@ footer > h5{
 }
 
 footer{
-  background-color: var(--HeaderAndFooter);
   width: 100%;
   height: min-content;
   display: flex;
@@ -424,10 +425,76 @@ footer{
   align-items: center;
 }
 
+#final{
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+}
+
+#final div > h4{
+  font-size: 20px;
+  margin-bottom: 1%;
+}
+
+#email{
+  display: flex;
+  border: 1px solid #001964;
+  width: 70%;
+  font-size: 16px;
+  border-radius:5px;
+  outline: none;
+  margin-left: 5px;
+}
+
+#email button{
+  font-size: 16px;
+  border: none;
+  background-color: var(--pesquisaBackgroud);
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+#campoPesquisa {
+  color:#001964
+}
+
 #QRcode{
   width: 150px;
   height:150px;
+  margin-left: 7.5%;
 }
+
+#redes{
+  margin-left: 10%;
+  display: flex;
+  width: 2%;
+}
+
+.inicio{
+  position: relative;
+  margin: 145px 0px 1px 0px;
+  width: 100%;
+  height: 500px;
+  background-color: #001964;
+  border-radius: 1%;
+}
+
+.imginicio {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.5; 
+}
+
+.slogam {
+  position: absolute;
+  top: 35%;
+  color: white; 
+  font-size: 5rem;
+}
+
 
 
 /*===============Media============*/
@@ -448,6 +515,10 @@ footer{
       display: none;
     }
 } @media screen and (max-width: 600px) {
+
+  .header a{
+    margin-left: -10px;
+  }
   #fund {
     height: min-content;
     width: 100%;
@@ -463,5 +534,32 @@ footer{
   }
   .right, .left {
     display: none;
+  }
+
+  .inicio{
+    height: 600px;
+    margin-top: 0px;
+  }
+
+  .dife{
+    display: none;
+  }
+
+  #final{
+    display: block;
+  }
+
+  #QRcode{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 150px;
+    height:150px;
+    margin-left: 25%;
+  }
+
+  #redes{
+    margin-left: 15%;
+    display: flex;
+    width: 5%;
   }
 }
