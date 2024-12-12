@@ -20,6 +20,7 @@ img {
     height: auto;
 
   }
+
   
   /*=================VARIAVEIS===================*/
 :root{
@@ -286,10 +287,10 @@ input::placeholder{
   /*===================Headear===================*/
 
   header {
-    position: fixed;
+    z-index: 1;
+    position: fixed; 
     width: 100%;
     background-color: var(--HeaderAndFooter);
-
   }
   .header{   
     display: flex; 
@@ -342,10 +343,12 @@ input::placeholder{
 
 
   /*PRODUTOS*/
+  
+
   #produto{
-    margin-top: 70px;
     display: flex;
     align-items: center;
+    margin-top: 50px;
     margin-bottom: 20px;
   }
 
@@ -366,15 +369,41 @@ input::placeholder{
     flex-direction: column;
   }
 
+  .carousel-item {
+    text-align: center;
+  }
+  .imgVenda {
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .carousel-item h3, .carousel-item h4 {
+    margin-top: 15px;
+  }
+  .carousel-item h4 s {
+    color: red;
+  }
   /*Cupons*/
 
   #descontos{
-    margin: 10px 0 10px 0px;
-    background-color: var(--cupons);
+    margin: 10px 0 10px 100px;
     padding: 20px;
     border-radius: 10px;
-
   }
+
+  #descontos img{
+    width: 100%;
+    height: 300px;
+  }
+
+  #textosdesc{
+    display: none;
+  }
+ 
 
   /*IMAGENS*/
   .imgVenda{
@@ -382,12 +411,16 @@ input::placeholder{
     height: 400px;
   }
 
-  .carousel-item-next, .carousel-item-prev, .carousel-item.active {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  } 
-
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .imgcupon{
+    opacity: 0.4;
+  }
   /*===============Media============*/
 
 @media screen and (max-width: 1024px){
@@ -410,139 +443,26 @@ input::placeholder{
     align-items: center;
     margin-bottom: 20px;
   }
+  .carousel-inner {
+    width: 90vw;
+   }
+  
+   #descontos{
+    margin: 0%;
+   }
+
+   #textosdesc{
+    display: block;
+  }
+
  } @media screen and (max-width: 430px){
   .logo {
     width: 70px;
     height: 70px;
     margin: 9px 0 9px 80px;
   }
+  .carousel-inner {
+   width: 50vw;
+  }
  }
 
-.containerVendas {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1140px;
-}
-
-.py-5 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.carousel {
-  position: relative;
-}
-
-.carousel.slide {
-  transition: transform 0.6s ease;
-}
-
-.carousel-fade .carousel-item {
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-
-.carousel-fade .carousel-item.active {
-  opacity: 1;
-  transition: opacity 0.6s ease;
-}
-
-.carousel-dark .carousel-control-prev-icon,
-.carousel-dark .carousel-control-next-icon {
-  filter: invert(1);
-}
-
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-item {
-  position: relative;
-  display: none;
-  width: 100%;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-.carousel-item.active {
-  display: block;
-}
-
-.d-block {
-  display: block;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5%;
-  height: 100%;
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background-size: 100% 100%;
-}
-
-.carousel-control-prev-icon {
-  background-image: url(../img/seta-esquerda.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-.carousel-control-next-icon {
-  background-image: url('../img/seta-direita.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-/* Estilos para o contêiner dos indicadores */
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;  /* Ajuste a posição vertical conforme necessário */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* Estilos para cada botão */
-.carousel-indicators button {
-  border: none;
-  background-color: transparent;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;  /* Espaço entre os indicadores */
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo do indicador */
-  transition: background-color 0.2s ease;
-}
-
-/* Estilo para o botão ativo (indicador do slide atual) */
-.carousel-indicators .active {
-  background-color: #ffffff;  /* Cor do indicador ativo */
-}
-
-/* Efeito de hover (quando o usuário passa o mouse) */
-.carousel-indicators button:hover {
-  background-color: rgba(255, 255, 255, 0.8);  /* Altera a cor ao passar o mouse */
-}
