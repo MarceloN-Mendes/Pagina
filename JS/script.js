@@ -1,7 +1,3 @@
-function validarEmail() {
-    alert("Seu email foi validado!");
-}
-
 const buscar = document.getElementById('buscar');
 const lista = document.getElementById('contPes');
 const content = document.getElementById('produtos')
